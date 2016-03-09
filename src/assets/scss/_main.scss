@@ -1,0 +1,486 @@
+
+@font-face {
+    font-family: 'museo100';
+    src: url('../fonts/museo/museo100-regular-webfont.eot');
+    src: url('../fonts/museo/museo100-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo/museo100-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/museo100-regular-webfont.woff') format('woff'),
+         url('../fonts/museo/museo100-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo/museo100-regular-webfont.svg#museo100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo300';
+    src: url('../fonts/museo/museo300-regular-webfont.eot');
+    src: url('../fonts/museo/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo/museo300-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/museo300-regular-webfont.woff') format('woff'),
+         url('../fonts/museo/museo300-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo/museo300-regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo500';
+    src: url('../fonts/museo/museo500-regular-webfont.eot');
+    src: url('../fonts/museo/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo/museo500-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/museo500-regular-webfont.woff') format('woff'),
+         url('../fonts/museo/museo500-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo/museo500-regular-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo700';
+    src: url('../fonts/museo/museo700-regular-webfont.eot');
+    src: url('../fonts/museo/museo700-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo/museo700-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/museo700-regular-webfont.woff') format('woff'),
+         url('../fonts/museo/museo700-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo/museo700-regular-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo900';
+    src: url('../fonts/museo/museo900-regular-webfont.eot');
+    src: url('../fonts/museo/museo900-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo/museo900-regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/museo900-regular-webfont.woff') format('woff'),
+         url('../fonts/museo/museo900-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo/museo900-regular-webfont.svg#museo900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// =============================== Standard things  ===============================
+body{
+  h1{
+    font-family: museo700;
+  }
+
+
+    @include breakpoint(medium down) {
+        h1{
+          font-size: 40px;
+        }
+     }
+
+    @include breakpoint(large) {
+
+     }
+}
+
+
+.standard-title{
+  padding: 50px 0px 0px 100px;
+  color: white;
+  font-family: museo700;
+}
+.standard-title-big{
+  padding: 50px 0px 0px 100px;
+  color: black;
+  font-size: 40px;
+  // text-align: left;
+  font-family: museo700;
+}
+.icon-title{
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 30px;
+  // border: solid 1px green;
+}
+
+.8colors-line{
+  margin-bottom: 100px;
+}
+
+.colors-line{
+  @include grid-col(1.5);
+  height: 2px;
+}
+
+.content-50{
+  @include grid-col(6);
+}
+
+//  =============================== Intro ===============================
+.logo{
+  @include grid-row();
+  width: grid-col(12);
+  padding: 40px;
+}
+
+.8colors-line {
+  margin-top: 50px;
+  display: none;
+}
+
+.parallax-background {
+
+  height: 420px;
+  background: url('../img/background-0-op.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.parallax-content {
+  height: 800px;
+  background-color: $primary-color;
+}
+
+
+
+//  ===============================summary secound content  ===============================
+.presentation{
+  // @include grid-row();
+
+  color: $secondary-color;
+
+
+      @include breakpoint(small) {
+        @include grid-col(24);
+
+       }
+
+      @include breakpoint(medium) {
+        @include grid-col-pos(2);
+        @include grid-col(12);
+       }
+
+      @include breakpoint(large) {
+        margin-top: 50px;
+        @include grid-col-pos(6);
+        @include grid-col(6);
+       }
+}
+
+
+.presentation-title{
+  padding-left: 35px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+    h1{
+      font-family: museo700;
+      padding-top: 10px;
+    }
+
+    @include breakpoint(small down) {
+      padding-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+}
+
+
+.list-presentation li{
+  list-style: none;
+  padding: 5px;
+    div{
+      width: 50px;
+      height: 50px;
+      // border: solid 1px red;
+      display: inline-block;
+    }
+    img{
+
+    }
+
+}
+
+.regular-content{
+  @include grid-row();
+  // width: grid-col(12);
+  // border: red 3px solid;
+  background: white;
+  height: 800px;
+}
+
+
+// =============================== What is megafoto? third content  ===============================
+
+.what-content{
+  // @include grid-row();
+  // width: grid-col(12);
+  // border: red 3px solid;
+  background: url('../img/lupa.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 20px;
+
+
+  @include breakpoint(medium down) {
+    @include grid-col(12);
+    height: 600px;
+   }
+
+   @include breakpoint(large) {
+     @include grid-col(12);
+     height: 800px;
+    }
+
+  height: 1000px;
+}
+
+.what-info{
+  background-color:rgba(255,255,255,0.8);
+
+  @include breakpoint(medium down) {
+    @include grid-col(12);
+    height: 600px;
+   }
+
+  @include breakpoint(large) {
+    @include grid-col(6);
+    p{
+      @include grid-col(7);
+      @include grid-col-pos(-3.7);
+    }
+
+      height: 800px;
+      img{
+        float: left;
+      }
+
+   }
+
+    h1{
+      padding: 0px;
+      margin-bottom: 0px;
+      position: relative;
+      left: 20px;
+      top: -40px;
+    }
+    h6{
+      margin: 0px;
+      padding: 0px;
+      text-align: right;
+      margin-bottom: 30px;
+      @include grid-col-pos(-6.5);
+    }
+
+}
+
+ // =============================== Features  ===============================
+ // Features colors with opacity
+ .f1{background-color:rgba(244,73,94,0.5);}
+ .f2{background-color:rgba(16,113,168,0.5);}
+ .f3{background-color:rgba(229,177,24,0.5);}
+ .f4{background-color:rgba(39,163,121,0.5);}
+ .f5{background-color:rgba(132,85,113,0.5);}
+ .f6{background-color:rgba(29,182,189,0.5);}
+
+.top-features{
+  padding-top: 130px;
+}
+.features{
+    background: $primary-color;
+}
+ .content-features{
+  height: 800px;
+  background-image: url('../img/features-background.jpg');
+    h5{
+      font-family: museo300;
+      padding-top: 20px;
+    }
+
+
+  .icon-feature{
+    text-align: center;
+    color: white;
+  }
+
+
+  @include breakpoint(medium down) {
+    .op-features{
+      @include grid-col(6);
+      // width: grid-col(6);
+      min-height: 270px;
+      // float: right;
+      // border-radius: 100%;
+      // margin-left: -20px;
+      // margin-top: 150px;
+      // float: right;
+    }
+
+   }
+
+  @include breakpoint(large) {
+    .content-f-op{
+      @include grid-col(4);
+      @include grid-col-pos(0.7);
+    }
+    .op-features{
+      // @include grid-col(1);
+      // width: grid-col(4);
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      margin-left: -20px;
+      margin-top: -70px;
+      // float: right;
+        p{
+          padding: 20px;
+        }
+      }
+
+    }
+
+
+
+ }
+
+// =============================== Timeline  ===============================
+.timeline{
+  background-color: $primary-color;
+  height: 700px;
+}
+
+.timeline-icon{
+  display: block;
+
+    h4{
+      font-size: 12px;
+      display: block;
+      float: right;
+      padding-right: 30px;
+      padding-top: 10px;
+      margin: 0px;
+      font-family: museo700;
+    }
+
+}
+
+.options-timeline{
+
+  p{
+    margin-top: 40px;
+  }
+
+  // font-size: 70px;
+  color: white;
+  @include breakpoint(small) {
+    @include grid-col(6);
+   }
+
+  @include breakpoint(medium) {
+    @include grid-col(3);
+   }
+
+  @include breakpoint(large) {
+    margin-top: 20px;
+    @include grid-col(1.5);
+   }
+
+  height: 500px;
+}
+
+// Timeline colors
+.t1{background-color:#e0495e;}
+.t2{background-color: #1071a8;}
+.t3{background-color:#e5b118;}
+.t4{background-color:#27a379;}
+.t5{background-color:#845585;}
+.t6{background-color:#1db6bd;}
+.t7{background-color:#5a7992;}
+.t8{background-color:#3b4b56;}
+
+ // =============================== Relatorio  ===============================
+
+.relatorio{
+  height: 1000px;
+  background-color: $primary-color;
+    h1{
+      color: white;
+    }
+}
+
+ // =============================== Mega-poster  ===============================
+
+.mega-poster{
+  height: 1000px;
+  background-image: url('../img/background-0-op.jpg');
+}
+
+
+// =============================== Numbers  ===============================
+.all-numbers{
+  @include grid-row();
+    .ball{
+      @include grid-col(2);
+      margin-left: 40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      border: solid 1px red;
+
+    }
+}
+// =============================== Clients  ===============================
+
+.logo-clients{
+
+  min-height: 700px;
+
+  @include breakpoint(medium down) {
+
+    .op-clients{
+      @include grid-col(4);
+    }
+   }
+
+  @include breakpoint(large) {
+
+    .op-clients{
+      @include grid-col(2);
+      // border: solid 1px green;
+      height: 170px;
+        img{
+          // border: solid 1px red;
+          margin-left: 50px;
+        }
+    }
+
+   }
+
+
+
+
+}
+
+ // =============================== contact  ===============================
+
+.contact{
+  background-color: $primary-color;
+  min-height: 400px;
+}

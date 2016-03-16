@@ -100,17 +100,30 @@ body{
   padding: 50px 0px 0px 100px;
   color: white;
   font-family: museo700;
+
+  @include breakpoint(medium down) {
+      padding: 0px 0px 0px 25px !important;
+   }
 }
 .standard-title-big{
   padding: 50px 0px 0px 100px;
   color: black;
   font-size: 40px;
+  text-align: left;
   // text-align: left;
   font-family: museo700;
 }
 .icon-title{
   width: 60px;
   height: 60px;
+  float: left;
+  margin-right: 30px;
+  // border: solid 1px green;
+}
+
+.icon-title-big{
+  width: 120px;
+  height: 120px;
   float: left;
   margin-right: 30px;
   // border: solid 1px green;
@@ -197,6 +210,9 @@ body{
       padding-left: 0px;
       margin-top: 0px;
       margin-bottom: 0px;
+      h1{
+        font-size: 32px;
+      }
     }
 }
 
@@ -218,8 +234,6 @@ body{
 
 .regular-content{
   @include grid-row();
-  // width: grid-col(12);
-  // border: red 3px solid;
   background: white;
   height: 800px;
 }
@@ -228,15 +242,13 @@ body{
 // =============================== What is megafoto? third content  ===============================
 
 .what-content{
-  // @include grid-row();
-  // width: grid-col(12);
-  // border: red 3px solid;
   background: url('../img/lupa.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin-bottom: 20px;
+
 
 
   @include breakpoint(medium down) {
@@ -249,15 +261,27 @@ body{
      height: 800px;
     }
 
-  height: 1000px;
+
 }
 
 .what-info{
   background-color:rgba(255,255,255,0.8);
+  margin-bottom: 100px;
+
+  @include breakpoint(1290 down) {
+    h1, h6{
+      @include grid-col(12);
+    }
+  }
 
   @include breakpoint(medium down) {
     @include grid-col(12);
     height: 600px;
+
+      p{
+        @include grid-col(12);
+      }
+
    }
 
   @include breakpoint(large) {
@@ -277,16 +301,16 @@ body{
     h1{
       padding: 0px;
       margin-bottom: 0px;
-      position: relative;
-      left: 20px;
-      top: -40px;
+      width: 100%;
+      display: block;
+      // @include grid-col(40%);
     }
     h6{
       margin: 0px;
       padding: 0px;
-      text-align: right;
+      text-align: center;
       margin-bottom: 30px;
-      @include grid-col-pos(-6.5);
+      // @include grid-col-pos(-6.5);
     }
 
 }
@@ -306,32 +330,38 @@ body{
 .features{
     background: $primary-color;
 }
+
+
  .content-features{
   height: 800px;
   background-image: url('../img/features-background.jpg');
     h5{
       font-family: museo300;
-      padding-top: 20px;
+      margin-top: 5px;
     }
 
 
   .icon-feature{
     text-align: center;
     color: white;
+    img{
+      width: 7%;
+      padding-top: 20px;
+    }
   }
 
 
   @include breakpoint(medium down) {
     .op-features{
       @include grid-col(6);
-      // width: grid-col(6);
       min-height: 270px;
-      // float: right;
-      // border-radius: 100%;
-      // margin-left: -20px;
-      // margin-top: 150px;
-      // float: right;
+
     }
+
+    .top-features{
+      padding-top: 0px;
+    }
+
 
    }
 
@@ -341,8 +371,6 @@ body{
       @include grid-col-pos(0.7);
     }
     .op-features{
-      // @include grid-col(1);
-      // width: grid-col(4);
       width: 300px;
       height: 300px;
       border-radius: 100%;
@@ -350,8 +378,13 @@ body{
       margin-top: -70px;
       // float: right;
         p{
-          padding: 20px;
+          padding: 5px;
         }
+      }
+
+      .margin-defined{
+        margin-right: 10%;
+        margin-left: 10%;
       }
 
     }
@@ -418,14 +451,83 @@ body{
  // =============================== Relatorio  ===============================
 
 .relatorio{
-  height: 1000px;
-  background-color: $primary-color;
-    h1{
-      color: white;
+
+    @include breakpoint(large) {
+      height: 1000px;
+      background: url('../img/background-relatorio.png') no-repeat right;
+      background-color: $primary-color;
+        h1{
+          color: white;
+        }
+
     }
+
+     @include breakpoint(medium down) {
+      height: 1000px;
+      background-color: $primary-color;
+      background-image: none;
+
+     }
+     h1{
+       color: white;
+     }
+}
+
+.relatorio-content{
+  @include grid-row();
+}
+.relatorio-text{
+ @include breakpoint(medium down) {
+  @include grid-col(12);
+  padding: 20px;
+ }
+  @include grid-col(4);
+  // @include grid-col-pos(-1.2);
+  float: left;
+  color: white;
 }
 
  // =============================== Mega-poster  ===============================
+
+ #ex-megaposter{
+   img{
+     width: 90%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto
+   }
+ }
+
+ .megaposter-title{
+
+   padding: 50px 0px 0px 100px;
+   color: black;
+   font-size: 40px;
+   text-align: left;
+   font-family: museo700;
+     img{
+       float: left;
+       padding-top: 20px;
+     }
+     h1{
+       float: left;
+       padding-left: 20px;
+     }
+
+
+
+
+     @include breakpoint(medium down) {
+       img{
+         width: 10%;
+       }
+      }
+
+
+
+ }
+
+
 
 .mega-poster{
   height: 1000px;
@@ -433,54 +535,292 @@ body{
 }
 
 
-// =============================== Numbers  ===============================
-.all-numbers{
-  @include grid-row();
-    .ball{
-      @include grid-col(2);
-      margin-left: 40px;
-      width: 200px;
-      height: 200px;
-      border-radius: 100%;
-      border: solid 1px red;
+// =============================== Your Brand  ===============================
+
+.content-your-brand{
+  height: 1000px;
+  background-image: url('../img/background-0-op.jpg');
+  h1{
+    padding: 50px 0px 0px 100px;
+    color: white;
+    font-family: museo700;
+    font-size: 70px;
+  }
+}
+.your-brand-icon-title{
+  img{
+    float: left;
+  }
+  h1{
+    float: left;
+  }
+}
+.Your-Brand-Left{
+  @include breakpoint(large) {
+    padding-top: 200px;
+    @include grid-col(6);
+    height: 100%;
+    background-color:rgba(59,75,86,0.7);
+    h1{
+      color: white !important;
+    }
+  }
+
+    @include breakpoint(small) {
+      @include grid-col(12);
+      h1{
+      color: black;
+      }
+    }
+
+}
+
+.Your-Brand-Right{
+
+
+  @include breakpoint(large) {
+    @include grid-col(6);
+    img{
+      padding-top: 200px;
+      width: 100%;
+      margin-top: 80px;
+      margin-left: 80px;
+    }
+  }
+
+  @include breakpoint(small) {
+    @include grid-col(12);
+    height: 700px;
+    img{
+      width: 60%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
 
     }
+
+
+}
+// =============================== Your Brand  ===============================
+
+
+
+// =============================== Numbers  ===============================
+
+// reset ///
+
+.all-numbers .ball:last-child:not(:first-child){
+  float: left !important;
+}
+.numbers{
+  background: $primary-color;
+  height: 2000px;
+}
+
+@include breakpoint(medium down) {
+
+  .balls-line{
+    display: none;
+  }
+  .ball{
+    @include grid-col(2);
+    // display: none;
+    }
+}
+
+.all-numbers{
+  padding-top: 100px;
+  margin-left: 30px;
+  @include grid-row();
+    .ball{
+      @include grid-col(6);
+      margin-left: 40px;
+      position: relative;
+      z-index: 20;
+
+
+      .content-ball{
+        text-align: center;
+        padding-top: 30px;
+
+        .ball-number{
+          color: #142d3d;
+          font-weight:700;
+          font-size: 20px;
+          font-family: museo700 !important;
+        }
+        .ball-title{
+          color: white;
+          font-family: museo500;
+          font-size: 16px;
+        }
+
+      }
+
+    }
+
+    .n1{
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        background: #e0495e;
+
+          span:first-child{
+            font-size: 72px !important;
+          }
+          span:nth-child(3){
+            font-size: 30px !important;
+            display: block;
+            margin-top: -25px !important;
+          }
+      }
+      .n2{
+
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        background: #1071a8;
+        top: 30px;
+
+        span:first-child{
+          font-size: 20px !important;
+        }
+
+      }
+      .n3{
+        width: 140px;
+        height: 140px;
+        border-radius: 100%;
+        background: #e5b118;
+        top: 50px;
+
+        span:first-child{
+          font-size: 20px !important;
+        }
+      }
+      .n4{
+
+        width: 120px;
+        height:120px;
+        border-radius: 100%;
+        background: #27a379;
+        top: 60px;
+
+        span:first-child{
+          font-size: 20px !important;
+        }
+
+      }
+      .n5{
+
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        background: #1db6bd;
+        top: 20px;
+
+        span:first-child{
+          font-size: 20px !important;
+        }
+
+      }
+
+}
+
+
+
+
+.balls-line{
+  position: relative;
+  top: -170px;
 }
 // =============================== Clients  ===============================
 
-.logo-clients{
+.clients{
+    @include breakpoint(medium down) {
+      min-height: 1200px;
+      height: auto;
+    }
 
+  h1{
+    color: black;
+  }
+
+}
+
+
+.logo-clients{
+  padding-top: 150px;
   min-height: 700px;
 
+}
   @include breakpoint(medium down) {
 
     .op-clients{
       @include grid-col(4);
     }
-   }
 
-  @include breakpoint(large) {
+  .logo-clients{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 
-    .op-clients{
-      @include grid-col(2);
+ }
+
+@include breakpoint(large) {
+
+  .op-clients{
+
+    @include grid-col(2);
       // border: solid 1px green;
       height: 170px;
         img{
-          // border: solid 1px red;
-          margin-left: 50px;
+          width: 60%;
+          margin-left: 20px;
         }
     }
 
    }
 
 
-
-
-}
-
  // =============================== contact  ===============================
 
 .contact{
   background-color: $primary-color;
-  min-height: 400px;
+  height: 1000px;
 }
+.content-contact{
+  @include grid-col-row();
+    p, span{
+      color: white;
+    }
+}
+
+.contact-left{
+  @include grid-col(6);
+
+  @include breakpoint(medium down) {
+    text-align: center;
+    @include grid-col(12);
+  }
+}
+
+.contact-right{
+  margin-bottom: 100px;
+  padding-top: 300px;
+  @include grid-col(6);
+    img{
+      max-width: 15%;
+    }
+
+    @include breakpoint(medium down) {
+      text-align: center;
+      margin-bottom: 100px;
+      @include grid-col(12);
+    }
+}
+
+
+
+// =============================== Animations  ===============================

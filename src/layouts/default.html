@@ -6,12 +6,17 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="Public">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2017 11:12:01 GMT">
     <title>Megafoto Apresentação</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <!-- <link rel="stylesheet" href="{{root}}assets/css/animate.css"> -->
 
-    <!-- Insert this within your head tag and after foundation.css -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" /> -->
+    <!-- meta dados para Apple  https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+<link rel="shortcut icon" href="http://www.megafoto.org/images/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.megafoto.org/images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.megafoto.org/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.megafoto.org/images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://www.megafoto.org/images/ico/apple-touch-icon-57-precomposed.png">
   </head>
   <body>
 
@@ -21,35 +26,41 @@
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
         <!-- off-canvas title bar for 'small' screen -->
-        <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
+        <!-- <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
           <div class="title-bar-left">
             <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
             <span class="title-bar-title">Menu</span>
           </div>
-        </div>
+        </div> -->
 
 
 
         <!-- "wider" top-bar menu for 'medium' and up -->
-         <div id="widemenu" class="top-bar">
+         <!-- <div id="widemenu" class="top-bar-2 hide">
            <div class="top-bar-left">
              <ul class="menu" data-dropdown-menu>
-               <li>1</li>
-               <li>2</li>
-               <li>3</li>
+               <ul class="list-presentation-menu">
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/About-Icon.png"></div>O que é?</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/About-Icon.png"></div>Features</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Timeline.png"></div>Timeline</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Marca.png"></div>Exponha sua marca</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Services.png"></div>Relatorios</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/About-Icon.png"></div>Megaposter</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Analysis.png"></div>Números</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Clients.png"></div>Clientes</li>
+                 <li><div><img src="{{root}}/assets/img/icons/presentation/Contact-us.png"></div>Contato</li>
+               </ul>
                  </ul>
                </li>
              </ul>
            </div>
-         </div>
+         </div> -->
 
 
         <!-- off-canvas left menu -->
-        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+        <div  class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
           <ul class="vertical dropdown menu" data-dropdown-menu>
-            <li><a href="left_item_1">Left item 1</a></li>
-            <li><a href="left_item_2">Left item 2</a></li>
-            <li><a href="left_item_3">Left item 3</a></li>
+            <li><a href="http://fanz360.com/">Home</a></li>
           </ul>
         </div>
 
@@ -71,6 +82,6 @@
 </div>
 </div>
 
-    <script src="{{root}}assets/js/app.js"></script>
+    <!-- <script src="{{root}}assets/js/app.js"></script> -->
   </body>
 </html>

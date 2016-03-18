@@ -2,7 +2,7 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 // additional
 // @import 'foundation/components/magellan';
@@ -41,8 +41,8 @@
 // @include foundation-tabs;
 // @include foundation-thumbnail;
 @include foundation-title-bar;
-@include foundation-tooltip;
-@include foundation-top-bar;
+// @include foundation-tooltip; // menu se for usar
+// @include foundation-top-bar; // menu se for usar
 
 // @include motion-ui-transitions;
 // @include motion-ui-animations;

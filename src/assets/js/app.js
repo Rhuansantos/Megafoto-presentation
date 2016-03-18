@@ -1,3 +1,3 @@
 $(document).foundation();
 
-$(document).foundation('magellan-expedition', 'reflow');
+// $(document).foundation('magellan-expedition', 'reflow');

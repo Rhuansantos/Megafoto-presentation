@@ -81,6 +81,11 @@
 body{
   h1{
     font-family: museo700;
+
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
   }
 
 
@@ -88,23 +93,39 @@ body{
         h1{
           font-size: 40px;
         }
-     }
 
-    @include breakpoint(large) {
+    }
 
-     }
 }
 
 
 .standard-title{
-  padding: 50px 0px 0px 100px;
-  color: white;
-  font-family: museo700;
+
+
+  @include breakpoint(large up) {
+    padding: 10px 0px 0px 100px;
+    color: white;
+    font-family: museo700;
+
+    h1{
+      margin-top: 7px !important;
+    }
+  }
+
 
   @include breakpoint(medium down) {
-      padding: 0px 0px 0px 25px !important;
-   }
+      padding: 50px 0px 0px 25px !important;
+      margin-top: 0px !important;
+      position: relative;
+      top: 10px !important;
+      margin-bottom: 50px;
+      color: white;
+    }
+
+
 }
+
+
 .standard-title-big{
   padding: 50px 0px 0px 100px;
   color: black;
@@ -118,7 +139,6 @@ body{
   height: 60px;
   float: left;
   margin-right: 30px;
-  // border: solid 1px green;
 }
 
 .icon-title-big{
@@ -394,9 +414,29 @@ body{
  }
 
 // =============================== Timeline  ===============================
+
+
+.icon-title-timeline{
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 30px;
+}
+
+
+@include breakpoint(medium down) {
+
+
+ }
+
+
 .timeline{
   background-color: $primary-color;
   height: 700px;
+
+    h1{
+      margin-top: 0px;
+    }
 }
 
 .timeline-icon{
@@ -424,6 +464,8 @@ body{
   color: white;
   @include breakpoint(small) {
     @include grid-col(6);
+
+
    }
 
   @include breakpoint(medium) {
@@ -451,19 +493,22 @@ body{
  // =============================== Relatorio  ===============================
 
 .relatorio{
-
+  h1{
+    margin: -10px;
+  }
     @include breakpoint(large) {
       height: 1000px;
       background: url('../img/background-relatorio.png') no-repeat right;
       background-color: $primary-color;
         h1{
           color: white;
+          text-align: left;
         }
 
     }
 
      @include breakpoint(medium down) {
-      height: 1000px;
+      height: 500px;
       background-color: $primary-color;
       background-image: none;
 
@@ -532,73 +577,140 @@ body{
 .mega-poster{
   height: 1000px;
   background-image: url('../img/background-0-op.jpg');
+  @include breakpoint(medium down) {
+        height: 500px;
+    }
+
+    @include breakpoint(small down) {
+        height: 400px;
+
+        h1{
+          font-size: 30px;
+          margin-left: -90px;
+        }
+
+        .megaposter-title{
+          img{
+            display: none;
+          }
+        }
+      }
 }
 
 
 // =============================== Your Brand  ===============================
 
 .content-your-brand{
-  height: 1000px;
   background-image: url('../img/background-0-op.jpg');
-  h1{
-    padding: 50px 0px 0px 100px;
-    color: white;
-    font-family: museo700;
-    font-size: 70px;
-  }
+  height: 900px !important;
+
+
+
+
+@include breakpoint(medium down) {
+  height: 1600px !important;
 }
+
+
+  @include breakpoint(medium up) {
+
+      h1{
+        font-size: 70px !important;
+        color: black !important;
+      }
+
+    }
+h1{
+  padding: 50px 0px 0px 100px;
+  text-align: left;
+}
+
+
+}
+
+
+
 .your-brand-icon-title{
+img{
+  width: 150px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 80px;
+}
+@include breakpoint(small down) {
   img{
-    float: left;
+  width: 15%;
+  margin-left: 5%;
+  margin-top: 60px;
   }
+
+}
+
+}
+
+
+
+.Your-Brand-Left{
+@include breakpoint(large) {
+  padding-top: 200px;
+  @include grid-col(6.5);
+  height: 100%;
+  background-color:rgba(59,75,86,0.7);
   h1{
-    float: left;
+    color: white !important;
   }
 }
-.Your-Brand-Left{
-  @include breakpoint(large) {
-    padding-top: 200px;
-    @include grid-col(6);
-    height: 100%;
-    background-color:rgba(59,75,86,0.7);
+
+
+
+  @include breakpoint(medium down) {
+    @include grid-col(12);
     h1{
-      color: white !important;
+    color: white;
+    font-size: 30px;
     }
   }
 
-    @include breakpoint(small) {
-      @include grid-col(12);
-      h1{
-      color: black;
-      }
-    }
+ @include breakpoint(small down) {
+        background-color:$primary-color;
+  }
 
 }
 
 .Your-Brand-Right{
 
+@include breakpoint(large down) {
+  background-image: url('../img/background-0-op.jpg');
+  background-color:rgba(59,75,86,0.7);
+  margin-top: 10px;
+}
 
-  @include breakpoint(large) {
-    @include grid-col(6);
-    img{
-      padding-top: 200px;
-      width: 100%;
-      margin-top: 80px;
-      margin-left: 80px;
-    }
+@include breakpoint(large) {
+  @include grid-col(5.5);
+  img{
+    padding-top: 200px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
 
-  @include breakpoint(small) {
-    @include grid-col(12);
-    height: 700px;
-    img{
-      width: 60%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      }
 
+
+
+@include breakpoint(small down) {
+  @include grid-col(12);
+  height: 500px;
+  img{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
     }
+
+  }
 
 
 }
@@ -615,29 +727,62 @@ body{
 }
 .numbers{
   background: $primary-color;
-  height: 2000px;
+  // height: 2000px;
+  h1{
+    margin-top: 0px;
+  }
 }
 
-@include breakpoint(medium down) {
 
+@include breakpoint(small down) {
+  .n5{
+    width: 100% !important;
+  }
+}
+@include breakpoint(1052 down) {
+
+  .all-numbers{
+    padding-top: 0px !important;
+    }
   .balls-line{
     display: none;
   }
   .ball{
-    @include grid-col(2);
-    // display: none;
+    @include grid-col(12);
+    margin-left: auto;
+    margin-right: auto;
     }
+
+    .n1,.n2,.n3,.n4,.n5{
+      width: 50% !important;
+      height: 200px !important;
+      border-radius: 0 !important;
+    }
+    .n1{
+      width: 100% !important;
+    }
+
+    .all-numbers .ball:last-child:not(:first-child){
+      // float: right !important;
+    }
+
+
+}
+
+@include breakpoint(large) {
+  .ball{
+    @include grid-col(6);
+    margin-left: 40px;
+    position: relative;
+    z-index: 20;
+}
+
 }
 
 .all-numbers{
   padding-top: 100px;
   margin-left: 30px;
   @include grid-row();
-    .ball{
-      @include grid-col(6);
-      margin-left: 40px;
-      position: relative;
-      z-index: 20;
 
 
       .content-ball{
@@ -656,9 +801,8 @@ body{
           font-size: 16px;
         }
 
-      }
-
     }
+
 
     .n1{
         width: 250px;
@@ -738,10 +882,15 @@ body{
 // =============================== Clients  ===============================
 
 .clients{
+
+  h1{
+    margin-top: 0px;
+  }
     @include breakpoint(medium down) {
-      min-height: 1200px;
+      min-height: 1000px;
       height: auto;
     }
+
 
   h1{
     color: black;
@@ -789,6 +938,10 @@ body{
 .contact{
   background-color: $primary-color;
   height: 1000px;
+
+  h1{
+    margin-top: 0px;
+  }
 }
 .content-contact{
   @include grid-col-row();
